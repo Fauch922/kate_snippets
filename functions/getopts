@@ -1,7 +1,7 @@
 while getopts "b:" o; do
-    case "o" in
+    case "\${o}" in
         b)
-            basedir="OPTARG"
+            basedir="\${OPTARG}"
             ;;
         *)
             usage
@@ -11,7 +11,7 @@ done
 shift $((OPTIND-1))
 
 
-if [[ -z "basedir" ]]; then
+if [[ -z "\${basedir}" ]]; then
     printred "parameter -b not defined.\n"
     usage
 fi
