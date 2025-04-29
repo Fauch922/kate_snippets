@@ -1,0 +1,13 @@
+function fileName() { return document.fileName(); }
+function fileUrl() { return document.url(); }
+function encoding() { return document.encoding(); }
+function selection() { return view.selectedText(); }
+function year() { return new Date().getFullYear(); }
+function upper(x) { return x.toUpperCase(); }
+function lower(x) { return x.toLowerCase(); }
+
+function date() {
+    var today = new Date();
+    return today.toISOString().substring(0, 10);
+
+}
