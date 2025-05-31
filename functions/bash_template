@@ -18,11 +18,11 @@
 	############################
 
 function printgreen () {
-   printf "${GREEN}${1}${NC}"
+   printf "\${GREEN}\${1}\${NC}"
 }
 
 function printred() {
-    printf "${RED}${1}${NC}"
+    printf "\${RED}\${1}\${NC}"
 }
 
 #
@@ -39,7 +39,7 @@ GREEN='\033[0;32m'
 NC='\033[0m' # No Color
 
 
-usage() { echo "Usage: ${0} -b (basedir)" 1>&2; exit 1; }
+usage() { echo "Usage: \${0} -b (basedir)" 1>&2; exit 1; }
 
 #
 #==============================================================================
